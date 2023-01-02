@@ -1,0 +1,28 @@
+{
+    "name": "Alexis Case",
+    "jobRole": "Software Engineer",
+    "location": "Austin",
+    "email": "alexiscase127@gmail.com",
+    "languages": [
+      {
+        "name": "React JS",
+        "yearsOfExperience": "3",
+        "proficiency": "8"
+      },
+      {
+        "name": "Node JS",
+        "yearsOfExperience": "3",
+        "proficiency": "7"
+      },
+      {
+        "name": "Javascript",
+        "yearsOfExperience": "5",
+        "proficiency": "8"
+      },
+      {
+        "name": "CSS",
+        "yearsOfExperience": "5",
+        "proficiency": "7"
+      }
+    ]
+}

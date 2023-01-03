@@ -20,19 +20,35 @@ exports.createPerson = async (req, res) => {
 };
 
 exports.getPerson = async (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    // data: {
-    //   about,
-    // },
-  });
+  try {
+    res.status(200).json({
+      status: 'success',
+      // data: {
+      //   about,
+      // },
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(400).json({
+      status: 'fail',
+      message: err,
+    });
+  }
 };
 
 exports.updatePerson = async (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    // data: {
-    //   about,
-    // },
-  });
+  try {
+    res.status(200).json({
+      status: 'success',
+      // data: {
+      //   about,
+      // },
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(400).json({
+      status: 'fail',
+      message: err,
+    });
+  }
 };

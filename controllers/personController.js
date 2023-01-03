@@ -1,9 +1,10 @@
 const Person = require('../models/personModel');
 
 exports.createPerson = async (req, res) => {
+  console.log('inside of creat person: ', req)
   try {
     const newPerson = await Person.create(req.body);
-    console.log('JOB ROLE', req);
+    console.log('After newPerson: ', newPerson)
     res.status(201).json({
       status: 'success',
       data: {

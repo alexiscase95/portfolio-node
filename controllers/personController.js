@@ -1,7 +1,6 @@
 const Person = require('../models/personModel');
 
 exports.createPerson = async (req, res) => {
-  console.log('inside of creat person: ', req)
   try {
     const newPerson = await Person.create(req.body);
     console.log('After newPerson: ', newPerson)
@@ -20,19 +19,19 @@ exports.createPerson = async (req, res) => {
   }
 };
 
-exports.getPerson = (req, res) => {
+exports.getPerson = async (req, res) => {
   try {
+    const person = await Person.findById(req.params.id);
     res.status(200).json({
       status: 'success',
-      // data: {
-      //   about,
-      // },
+      data: {
+        person,
+      },
     });
   } catch (err) {
-    console.log(err);
-    res.status(400).json({
+    res.status(404).json({
       status: 'fail',
-      message: err,
+      message: 'Person not found',
     });
   }
 };

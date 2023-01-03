@@ -3,10 +3,11 @@ const personController = require('../controllers/personController');
 
 const router = express.Router();
 
+router.route('/').post(personController.createPerson);
+
 router
-  .route('/')
+  .route('/:id')
   .get(personController.getPerson)
-  .patch(personController.updatePerson)
-  .post(personController.createPerson);
+  .patch(personController.updatePerson);
 
 module.exports = router;

@@ -19,7 +19,7 @@ exports.createPerson = async (req, res) => {
   }
 };
 
-exports.getPerson = async (req, res) => {
+exports.getPerson = (req, res) => {
   try {
     res.status(200).json({
       status: 'success',
@@ -36,7 +36,7 @@ exports.getPerson = async (req, res) => {
   }
 };
 
-exports.updatePerson = async (req, res) => {
+exports.updatePerson = (req, res) => {
   try {
     res.status(200).json({
       status: 'success',

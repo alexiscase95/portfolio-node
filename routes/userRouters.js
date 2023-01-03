@@ -3,7 +3,8 @@ const userController = require('../controllers/userController');
 
 const router = express.Router();
 
-router.param('id', userController.checkId);
+//param middleware examples
+// router.param('id', userController.checkId);
 
 router
   .route('/')
